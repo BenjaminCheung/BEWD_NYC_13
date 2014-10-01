@@ -40,7 +40,6 @@ blog_posts = [
   }
 ]
 
-
 # There shouldn't be any need to edit anything above this line
 #
 # Your goal is to iterate through `blog_posts` using any method that you have
@@ -75,8 +74,6 @@ tags = blog_posts.map do |blog|
 end
 
 tags = tags.flatten.uniq
-
-
 
 # There shouldn't be any need to edit anything below this line
 

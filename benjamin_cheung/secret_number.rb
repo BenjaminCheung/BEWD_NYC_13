@@ -14,7 +14,7 @@
 #     guess a number between 1 and 10 and that they only have 3 tries to do so.
 #
 #   Functionality:
-#     - Manually specify the secret number in a variable. Choose a random 
+#     - Manually specify the secret number in a variable. Choose a random
 #       number between 1 and 10.
 #     - Ask the user for their guess.
 #     - Verify if they were correct. If the player guesses correctly they win
@@ -34,7 +34,7 @@ def get_input
   gets.strip
 end
 
-secret = 5
+secret = rand(1..10)
 $tries = 2
 
 puts "Welcome to the Secret number game created by Benjamin Cheung."
@@ -51,26 +51,26 @@ guess = get_input.to_i;
 
 
 while $tries > 0 do
-	if guess == secret 
+	if guess == secret
 		puts "Congratulations your guess of #{guess} is correct."
 		break
 	end
 
-	if guess > secret 
+	if guess > secret
 		puts "Sorry your guess was too high"
-	elsif guess < secret 
+	elsif guess < secret
 		puts "Sorry your guess was too low"
 	end
-	
+
 	puts "Please try again you have #{$tries} tries left"
 	guess = get_input.to_i
 	$tries = $tries - 1
 
-	if guess != secret && $tries == 0 
+	if guess != secret && $tries == 0
 		puts "Sorry game over the secret number was #{secret}"
 	end
 end
-	
+
 
 
 
