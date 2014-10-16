@@ -5,8 +5,6 @@ require 'pry'
 
 quizMovie = Movie.new
 
-
-
 rYear = rand(2006..2014)
 
 url = "http://api.themoviedb.org/3/discover/movie?api_key=8441d2cd141a4f1530356e8634f3af99&sort_by=popularity.desc&vote_count.gte=50&year=#{rYear}"
